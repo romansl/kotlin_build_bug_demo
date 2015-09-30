@@ -9,6 +9,7 @@ d:\Projects\KotlinBuildFailedDemo\app\build\outputs\apk\app-debug-unaligned.apk
 d:\Projects\KotlinBuildFailedDemo\app\build\intermediates\classes\debug\com\romansl\kotlin\BuildConfig.class
 d:\Projects\KotlinBuildFailedDemo\app\build\intermediates\classes\debug\com\romansl\kotlin\MainActivity.class
 d:\Projects\KotlinBuildFailedDemo\app\build\tmp\kotlin-classes\debug\com\romansl\kotlin\MainActivityFragment.class
+d:\Projects\KotlinBuildFailedDemo\app\build\intermediates\classes\debug\com\romansl\kotlin\MainActivityFragment.class
 d:\Projects\KotlinBuildFailedDemo\app\build\intermediates\classes\debug\com\romansl\kotlin\R.class
 d:\Projects\KotlinBuildFailedDemo\app\build\intermediates\classes\debug\android\support\v7\appcompat\R.class
 d:\Projects\KotlinBuildFailedDemo\app\build\intermediates\classes\debug\com\romansl\kotlin\R$anim.class
