@@ -5,14 +5,24 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import org.greenrobot.eventbus.Subscribe
 
 /**
  * A placeholder fragment containing a simple view.
  */
-public class MainActivityFragment : Fragment() {
+class MainActivityFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         return inflater!!.inflate(R.layout.fragment_main, container, false)
+    }
+
+    @Subscribe
+    fun onEvent(event: Event) {
+
+    }
+
+    class Event {
+
     }
 }

@@ -1,9 +1,25 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
+repositories {
+    mavenCentral()
+    maven { url "http://dl.bintray.com/kotlin/kotlin-eap" }
+}
+
+buildscript {
+    ext.kotlin_version = '1.0.6-eap-77'
+    repositories {
+        mavenCentral()
+        maven { url "http://dl.bintray.com/kotlin/kotlin-eap" }
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.1"
+    compileSdkVersion 24
+    buildToolsVersion "23.0.3"
 
     defaultConfig {
         applicationId "com.romansl.kotlin"
@@ -25,18 +41,15 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:23.0.1'
+    compile 'com.android.support:appcompat-v7:25.0.1'
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    compile 'org.greenrobot:eventbus:3.0.0'
+    kapt 'org.greenrobot:eventbus-annotation-processor:3.0.1'
+    provided 'org.glassfish:javax.annotation:10.0-b28'
 }
-buildscript {
-    ext.kotlin_version = '0.13.1514'
-    repositories {
-        mavenCentral()
+
+kapt {
+    arguments {
+        arg('eventBusIndex', 'com.romansl.MyEventBusIndex')
     }
-    dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-    }
-}
-repositories {
-    mavenCentral()
 }
